@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+<h3 style="text-align: center">List of all charity clients</h3>
+<div class="column" style="font-weight: bold">Name</div>
+<div class="column" style="font-weight: bold">Name</div>
+<div class="column" style="font-weight: bold">Name</div>
+        {% for entry in clients|batch(3) %}
+
+                {% for column in entry %}
+                    <div class="column">{{ column.FirstName }} {{ column.LastName }}</div>
+                {% endfor %}
+        {% endfor %}
+{% endblock %}

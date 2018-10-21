@@ -1,0 +1,8 @@
+{# templates/user/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% for entry in users %}
+        <h2>{{ entry.username }} - {{ entry.password}} <a class="btn btn-action" href="/user/{{ entry.id }}">Detail</a></h2>
+    {% endfor %}
+{% endblock %}
